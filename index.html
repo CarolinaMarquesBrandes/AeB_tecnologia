@@ -3,120 +3,120 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>A & B Tecnologia</title>
+    <title>DenteClean</title>
     <link rel="stylesheet" href="estilo.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="js/jquery.localScroll.min.js"></script>
 
     <script>
         $(document).ready(function() {
-            var alturaBanner = $("#banner-header").height();
-
-            // alert(alturaBanner);
-            $(window).scroll(function() {
-                if ($(window).scrollTop() > alturaBanner) {
-                    $("header").addClass("header-scroll");
-                } else {
-                    $("header").removeClass("header-scroll");
-                }
-            })
+            $('#menuPrincipal').localScroll({
+                target: 'body', /* o efeito vai ser aplicado em td body, target é o alvo*/
+                duration: 1000, // seg
+                offset: -60 // ajuste da posicao
+            });
         });
 
     </script>
-
 </head>
 
 <body>
     <header>
-        <div class="centraliza-conteudo flex-header">
-            <img src="img/logo.png" alt="logo">
+        <div class="centralizar-conteudo flex-topo">
+            <div class="logo">
+                <img src="img/logo.png" alt="logo DenteClean">
+            </div>
 
-            <nav class="menu">
-                <a href="index.html">Home</a>
-                <a href="quemSomos.html">Quem Somos</a>
-                <a href="servicos.html">Serviços</a>
-                <a href="localizacao.html">Localização</a>
-                <a href="contato.html">Contato</a>
+            <nav id="menuPrincipal">
+                <a href="#banner">Inicio</a>
+                <a href="#quemSomos">Quem Somos</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#contato">Contato</a>
             </nav>
         </div>
     </header>
 
-    <div id="banner-header">
-        <div class="centraliza-conteudo flex-article-1">
-            <article class="artigo-banner">
-                <h1>Lorem ipsum dolor sit amet</h1>
-                <p>liquam consequat, dui sit amet consectetur viverra, odio sem iaculis quam, quis facilisis orci elit eget urna. Aenean dictum iaculis magna, sit amet porta magna vehicula consequat. Donec semper viverra vehicula. Pellentesque a sapien quis purus imperdiet placerat.</p>
+    <div id="banner"></div>
 
-                <a class="botao-conheca-mais" href="">Conheça Nossos Serviços</a>
-            </article>
-        </div>
-    </div>
+    <article class="centralizar-conteudo" id="quemSomos">
+        <h1>Odontologia é aqui</h1>
 
-    <article class="centraliza-conteudo  artigo-1">
-        <h1>Aliquam consequat dui sit amet consectetur</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin metus lacus, lacinia sed ligula sed, congue varius orci. Donec eget est ultricies, facilisis sapien ac, placerat ipsum. Nullam lobortis, ex a molestie porttitor, lacus quam finibus magna, a fermentum mi urna ut augue. Duis sodales dapibus eleifend. Aenean malesuada, tellus nec vestibulum vehicula, tellus lectus porta nunc, nec lobortis tortor. Sed eu justo pharetra, ultrices metus ullamcorper, tincidunt dolor.</p>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates saepe vero deserunt neque repudiandae repellendus, veniam suscipit atque inventore distinctio iure, aperiam voluptatibus iste molestias, maiores harum eligendi ipsa totam.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin metus lacus, lacinia sed ligula sed, congue varius orci. Donec eget est ultricies, facilisis sapien ac, placerat ipsum. Nullam lobortis, ex a molestie porttitor, lacus quam finibus magna, a fermentum mi urna ut augue. Duis sodales dapibus eleifend. Aenean malesuada, tellus nec vestibulum vehicula, tellus lectus porta nunc, nec lobortis tortor. Sed eu justo </p>
+
+        <img src="img/imagem-quem-somos.jpg" alt="">
     </article>
 
-    <section class="flex-article-2">
-        <h1>Lorem Ipsm dolor sit amet</h1>
-    </section>
+    <article class="centralizar-conteudo" id="servicos">
+        <h1>Nossos serviços</h1>
 
-    <div class="centraliza-conteudo flex-na-section">
-        <section class="coluna">
-            <h2>A Empresa</h2>
-            <img src="img/a-empresa.jpg" alt="">
-            <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-            <p>Ut enim ad minim veniam, quis nostrud. Exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate </p>
-            <a class="botao-saiba-mais" href="">Saiba Mais</a>
-        </section>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut urna sapien, quis sollicitudin nunc. Sed commodo pretium feugiat. Quisque id metus ut quam sodales egestas ac sed leo. Proin volutpat consequat mi vitae ornare. Aenean interdum aliquet ornare. Donec massa purus, egestas eu ante varius, consequat sollicitudin libero.</p>
 
-        <section class="coluna">
-            <h2>Soluções Web</h2>
-            <img src="img/solucoes.jpg" alt="">
-            <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-            <p>Ut enim ad minim veniam, quis nostrud. Exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate </p>
-            <a class="botao-saiba-mais" href="">Saiba Mais</a>
-        </section>
+        <figure class="img-direita">
+            <img src="img/imagem-servicos.jpg" alt="">
 
-        <section class="coluna">
-            <h2>Depoimentos</h2>
-            <img src="img/depoimentos.jpg" alt="">
-            <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-            <p>Ut enim ad minim veniam, quis nostrud. Exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate </p>
-            <a class="botao-saiba-mais" href="">Saiba Mais</a>
-        </section>
-    </div>
+            <figcaption>Agende sua consulta</figcaption>
+        </figure>
 
-    <footer>
-        <div class="flex-footer centraliza-conteudo">
-            <section class="coluna-footer1">
-                <h2>Venha nos conhecer</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqui.</p>
 
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est </p>
-            </section>
+        <ul>
+            <li>
+                <h3>Etiam Varius:</h3> accumsan nisl, vel dictum dui sollicitudin vel. Duis ac ro
+                in quam tincidunt varius eu ut lectus. Donec consectetur tortor vitae ipsum convallis ornare. Cras tempor, elit nec eleifend egestas.
+            </li>
+            <li>
+                <h3>Etiam Varius:</h3> accumsan nisl, vel dictum dui sollicitudin vel. Duis ac ro
+                in quam tincidunt varius eu ut lectus. Donec consectetur tortor vitae ipsum convallis ornare. Cras tempor, elit nec eleifend egestas.
+            </li>
+            <li>
+                <h3>Etiam Varius:</h3> accumsan nisl, vel dictum dui sollicitudin vel. Duis ac ro
+                in quam tincidunt varius eu ut lectus. Donec consectetur tortor vitae ipsum convallis ornare. Cras tempor, elit nec eleifend egestas.
+            </li>
+            <li>
+                <h3>Etiam Varius:</h3> accumsan nisl, vel dictum dui sollicitudin vel. Duis ac ro
+                in quam tincidunt varius eu ut lectus. Donec consectetur tortor vitae ipsum convallis ornare. Cras tempor, elit nec eleifend egestas.
+            </li>
+            <li>
+                <h3>Etiam Varius:</h3> accumsan nisl, vel dictum dui sollicitudin vel. Duis ac ro
+                in quam tincidunt varius eu ut lectus. Donec consectetur tortor vitae ipsum convallis ornare. Cras tempor, elit nec eleifend egestas.
+            </li>
+        </ul>
 
-            <section class="coluna-footer2">
-                <h2>Assine nossa NewsLetter</h2>
+        <div class="clear-float"></div>
 
-                <form action="">
-                    <label for="nome">Nome</label>
-                    <input type="text" id="nome">
+    </article>
 
-                    <label for="email">Email</label>
-                    <input type="email" id="email">
+    <div id="banner-crianca"></div>
 
-                    <button type="submit">Enviar</button>
+    <article class="centralizar-conteudo" id="contato">
 
-                </form>
-            </section>
+        <h1>Contato</h1>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis perspiciatis aspernatur, quam nostrum possimus explicabo error repellat mollitia a illo quod libero maiores provident aperiam voluptatibus impedit rem recusandae distinctio commodi aut soluta, totam porro aliquam et esse? Modi quis laborum ad quos tempora laboriosam perferendis tenetur sunt earum, enim.</p>
+
+        <div class="flex-maps">
+
+            <form action="" method="">
+                <label for="nome">Nome:</label>
+                <input id="nome" type="text">
+
+                <label for="email">Email:</label>
+                <input id="email" type="email">
+
+                <label for="msg">Mensagem:</label>
+                <textarea name="mensagem" id="msg" cols="30" rows="10"></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.190131931921!2d-43.1793738854004!3d-22.906356943613613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997f5e5f6342c9%3A0xf6018ea6cf83f7!2sBurger+King!5e0!3m2!1spt-BR!2sbr!4v1553702251013" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
         </div>
-
-    </footer>
-
+    </article>
 
 
 </body>
