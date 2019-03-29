@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>A & B Tecnologia</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var alturaBanner = $("#banner-header").height();
+
+            // alert(alturaBanner);
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > alturaBanner) {
+                    $("header").addClass("header-scroll");
+                } else {
+                    $("header").removeClass("header-scroll");
+                }
+            })
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <div class="centraliza-conteudo flex-header">
+            <img src="img/logo.png" alt="logo">
+
+            <nav class="menu">
+                <a href="index.html">Home</a>
+                <a href="quemSomos.html">Quem Somos</a>
+                <a href="servicos.html">Serviços</a>
+                <a href="localizacao.html">Localização</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <div id="banner-header">
+        <div class="centraliza-conteudo flex-article-1">
+            <article class="artigo-banner">
+                <h1>Lorem ipsum dolor sit amet</h1>
+                <p>liquam consequat, dui sit amet consectetur viverra, odio sem iaculis quam, quis facilisis orci elit eget urna. Aenean dictum iaculis magna, sit amet porta magna vehicula consequat. Donec semper viverra vehicula. Pellentesque a sapien quis purus imperdiet placerat.</p>
+
+                <a class="botao-conheca-mais" href="">Conheça Nossos Serviços</a>
+            </article>
+        </div>
+    </div>
+
+    <article class="centraliza-conteudo  artigo-1">
+        <h1>Aliquam consequat dui sit amet consectetur</h1>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates saepe vero deserunt neque repudiandae repellendus, veniam suscipit atque inventore distinctio iure, aperiam voluptatibus iste molestias, maiores harum eligendi ipsa totam.</p>
+    </article>
+
+    <section class="flex-article-2">
+        <h1>Lorem Ipsm dolor sit amet</h1>
+    </section>
+
+    <div class="centraliza-conteudo flex-na-section">
+        <section class="coluna">
+            <h2>A Empresa</h2>
+            <img src="img/a-empresa.jpg" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+            <p>Ut enim ad minim veniam, quis nostrud. Exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate </p>
+            <a class="botao-saiba-mais" href="">Saiba Mais</a>
+        </section>
+
+        <section class="coluna">
+            <h2>Soluções Web</h2>
+            <img src="img/solucoes.jpg" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+            <p>Ut enim ad minim veniam, quis nostrud. Exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate </p>
+            <a class="botao-saiba-mais" href="">Saiba Mais</a>
+        </section>
+
+        <section class="coluna">
+            <h2>Depoimentos</h2>
+            <img src="img/depoimentos.jpg" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+            <p>Ut enim ad minim veniam, quis nostrud. Exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate </p>
+            <a class="botao-saiba-mais" href="">Saiba Mais</a>
+        </section>
+    </div>
+
+    <footer>
+        <div class="flex-footer centraliza-conteudo">
+            <section class="coluna-footer1">
+                <h2>Venha nos conhecer</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqui.</p>
+
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est </p>
+            </section>
+
+            <section class="coluna-footer2">
+                <h2>Assine nossa NewsLetter</h2>
+
+                <form action="">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome">
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email">
+
+                    <button type="submit">Enviar</button>
+
+                </form>
+            </section>
+        </div>
+
+    </footer>
+
+
+
+</body>
+
+</html>
